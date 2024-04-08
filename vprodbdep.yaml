@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: vprodb
-          image: vprofile/vprofiledb:v1
+          image: vprofile/vprofiledb
           volumeMounts:
             - mountPath: /var/lib/mysql
               name: vprodb-vol
@@ -34,7 +34,7 @@ spec:
       volumes:
         - name: vprodb-vol
           awsElasticBlockStore:
-            volumeID: vol-07609d6b0e7c1a218
+            volumeID: vol-053b973015d352b6d
             fsType: ext4
 
       initContainers:
